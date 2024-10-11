@@ -1,0 +1,128 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background: #333;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #fff;
+}
+/* Upload Document Section */
+.upload-container {
+    background: #333; /* Set your desired background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-container h2 {
+    color: #fff; /* Ensure text is readable against dark background */
+}
+
+.upload-container input[type="file"] {
+    margin: 10px 0; /* Space around the file input field */
+}
+
+.file-preview {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold; /* Make file name bold */
+    margin-top: 10px; /* Space above file preview */
+}
+
+/* Improve Document Button */
+button {
+    margin-top: 10px; /* Space above the button */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Loading Effect */
+.loader {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 10px;
+    display: flex; /* Flex display for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.loader::after {
+    content: '';
+    border: 4px solid rgba(255, 255, 255, 0.3); /* Border color */
+    border-top: 4px solid #007bff; /* Top color for the spinner */
+    border-radius: 50%;
+    width: 20px; /* Width of the loader */
+    height: 20px; /* Height of the loader */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin-left: 10px; /* Space between text and spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Document container styling */
+.document-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.document-viewer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.document-content {
+    flex: 1;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+    height: 80vh;
+}
+
+/* Suggestions styling */
+.suggestions-container {
+    margin-top: 20px;
+    max-height: 80vh; /* Limit the height of the suggestions section */
+    overflow-y: auto; /* Enable scrolling if suggestions exceed the section */
+}
+
+.suggestions-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.suggestions-container li {
+    margin-bottom: 10px;
+}
