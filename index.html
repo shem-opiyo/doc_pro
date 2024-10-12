@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.1/mammoth.browser.min.js"></script>
+    <title>AI Document Assistant</title>
+    
+  <link rel="stylesheet" href="/doc_pro/assets/index-51ce820f.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>DOCUMENT ASSISTANT</h2>
+        
+        <div class="upload-container">
+            <h2>Upload Document</h2>
+            <input type="file" id="fileInput" accept=".txt, .docx, .pdf">
+            <button id="improveButton" disabled>Improve Document</button>
+            <div id="loader" class="loader" style="display:none;">Improving...</div>
+            <div id="filePreview" class="file-preview">File Name: <span id="fileName">No file chosen</span></div>
+        </div>
+        
+        
+        <div class="suggestions-container">
+            <h2>Suggestions</h2>
+            <ul id="suggestionsList"></ul>
+        </div>
+    </div>
+    
+    <div class="document-container">
+        <div class="document-viewer">
+            <h3>Original Document</h3>
+            <textarea id="originalDocument" class="document-content" readonly></textarea>
+        </div>
+        <div class="document-viewer">
+            <h3>Improved Document</h3>
+            <textarea id="improvedDocument" class="document-content" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
